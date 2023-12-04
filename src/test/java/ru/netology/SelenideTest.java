@@ -1,4 +1,5 @@
 package ru.netology;
+
 import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.BeforeAll;
@@ -19,16 +20,8 @@ import static com.codeborne.selenide.Selenide.open;
 public class SelenideTest {
 
 
-    private WebDriver driver;
-
-    @BeforeAll
-    public static void setupAll() {
-        WebDriverManager.chromedriver().setup();
-    }
-
     @BeforeEach
     void setUp() {
-        Configuration.headless = true;
         open("http://localhost:9999");
     }
 
